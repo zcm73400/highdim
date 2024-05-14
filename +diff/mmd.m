@@ -57,9 +57,9 @@ else
    sigma = par.Results.sigma;
 end
 
-K = utils.rbf(sigma,x);
-L = utils.rbf(sigma,y);
-KL = utils.rbf(sigma,x,y);
+K = utils.rbf(x,x);
+L = utils.rbf(y,y);
+KL = utils.rbf(x,y,sigma);
 K = utils.zerodiag(K);
 L = utils.zerodiag(L);
 
